@@ -65,7 +65,7 @@ export default function App() {
           <chakra.p
             px={{ base: 0, lg: 24 }}
             mb={6}
-            fontSize={{ base: "sm", md: "md" }}
+            fontSize={{ base: "lg", md: "xl" }}
             color={useColorModeValue("gray.600", "gray.300")}
           >
             To make use of the NEAR blockchain, you need to sign in. The button below
