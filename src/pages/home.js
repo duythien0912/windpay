@@ -69,7 +69,7 @@ const HomePage = () => {
     // set_greeting(newGreeting)
 
     // // show Notification
-    // setShowNotification(true)
+    setShowNotification(true)
 
     // // remove Notification again after css animation completes
     // // this allows it to be shown again next time the form is submitted

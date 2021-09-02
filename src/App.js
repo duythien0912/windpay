@@ -10,6 +10,7 @@ import HomePage from "./pages/home"
 import { Box } from "@chakra-ui/layout"
 import { Button } from "@chakra-ui/button"
 import { chakra, useColorModeValue } from "@chakra-ui/react"
+import Notification from "./components/notification"
 
 const { networkId } = getConfig(process.env.NODE_ENV || "development")
 
@@ -90,11 +91,24 @@ export default function App() {
             Go ahead and click the button below to try it out:
           </chakra.p>
           <chakra.p style={{ textAlign: "center", marginTop: "2.5em" }}>
-            <Button colorScheme="brand" onClick={login}>
+            <Button
+              colorScheme="brand"
+              onClick={() => {
+                try {
+                  login()
+                } catch (e) {
+                  setShowNotification(true)
+                  setTimeout(() => {
+                    setShowNotification(false)
+                  }, 11000)
+                }
+              }}
+            >
               Sign in
             </Button>
           </chakra.p>
         </Box>
+        {showNotification && <Notification />}
       </main>
     )
   }
