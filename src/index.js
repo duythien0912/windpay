@@ -7,6 +7,7 @@ import { ColorModeScript } from "@chakra-ui/react"
 import { config } from "./theme"
 import Theme from "./theme"
 import Header from "./components/header"
+import Credits from "./components/credits"
 
 window.nearInitPromise = initContract()
   .then(() => {
@@ -15,6 +16,7 @@ window.nearInitPromise = initContract()
         <ColorModeScript initialColorMode={config.initialColorMode} />
         <Header />
         <App />
+        <Credits />
       </Theme>,
       document.querySelector("#root")
     )

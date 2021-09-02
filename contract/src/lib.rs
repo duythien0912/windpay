@@ -38,7 +38,7 @@ impl Default for Welcome {
 #[near_bindgen]
 impl Welcome {
     #[payable]
-    pub fn pay_approve(&mut self, message: String, receiver_id: AccountId,
+    pub fn pay_approve(&mut self, invoice_id: String, receiver_id: AccountId,
     ) {
         let owner = env::predecessor_account_id();
         let current_contract_account = env::current_account_id();
@@ -49,14 +49,7 @@ impl Welcome {
         Promise::new(receiver_id.clone()).transfer(deposit);
 
         // Use env::log to record logs permanently to the blockchain!
-        env::log(format!("Deposit '{}' for account '{}'", deposit, receiver_id,).as_bytes());
-
-        let account_id = env::signer_account_id();
-
-        // Use env::log to record logs permanently to the blockchain!
-        env::log(format!("Pay approve '{}' for account '{}'", message, account_id,).as_bytes());
-
-        self.records.insert(&account_id, &message);
+        env::log(format!("Deposit invoice '{}' for account '{}'", invoice_id, receiver_id,).as_bytes());
     }
 
     pub fn set_greeting(&mut self, message: String) {

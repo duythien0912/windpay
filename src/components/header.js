@@ -125,6 +125,8 @@ const ChakraUIHeader = () => {
         bg={bg}
         borderTop="6px solid"
         borderTopColor="brand.400"
+        borderBottom="1px solid"
+        borderBottomColor="gray.700"
         w="full"
         overflowY="hidden"
       >

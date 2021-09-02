@@ -1,4 +1,5 @@
 import React from "react"
+import short from "short-uuid"
 
 import {
   chakra,
@@ -18,20 +19,24 @@ import {
   InputLeftAddon,
   Select,
 } from "@chakra-ui/react"
+import { useHistory } from "react-router"
 
 const CreatePage = () => {
   const [isLoading, set_isLoading] = React.useState(false)
+  let history = useHistory()
 
   const onSubmit = async (event) => {
     event.preventDefault()
     const { price } = event.target.elements
     const _price = price.value
+    const _invoiceId = short.generate()
+    history.push(`/invoice/${_invoiceId}/${_price}`)
   }
   return (
     <>
       <Box as="main" px={8} py={32} mx="auto">
         <Box
-          w={{ base: "full", md: 7 / 12 }}
+          w={{ base: "full", md: 5 / 12 }}
           mx="auto"
           mb={2}
           textAlign={{ base: "left", md: "left" }}
@@ -41,8 +46,8 @@ const CreatePage = () => {
 
         <SimpleGrid
           as="form"
-          w={{ base: "full", md: 7 / 12 }}
-          columns={{ base: 1, lg: 8 }}
+          w={{ base: "full", md: 5 / 12 }}
+          columns={{ base: 1, lg: 6 }}
           spacing={3}
           pt={1}
           mx="auto"
@@ -51,7 +56,7 @@ const CreatePage = () => {
           justifyContent="center"
           onSubmit={onSubmit}
         >
-          <GridItem as="label" mb={1} colSpan={{ base: "auto", lg: 6 }}>
+          <GridItem as="label" mb={2} colSpan={{ base: "auto", lg: 6 }}>
             <VisuallyHidden>Price: </VisuallyHidden>
             <InputGroup>
               <InputLeftAddon minHeight="48px" children="Price:" />
@@ -60,6 +65,7 @@ const CreatePage = () => {
                 size="lg"
                 id="price"
                 type="number"
+                step=".01"
                 placeholder="Enter your price..."
                 required={true}
               />
@@ -72,12 +78,12 @@ const CreatePage = () => {
               </InputRightAddon>
             </InputGroup>
           </GridItem>
-          <GridItem as="label" colSpan={{ base: "auto", lg: 2 }}>
+          <GridItem as="label" colSpan={{ base: "auto", lg: 6 }}>
             <Button
               isLoading={isLoading}
               w="full"
               variant="solid"
-              size="lg"
+              size="md"
               type="submit"
               colorScheme="brand"
               cursor="pointer"

@@ -7,6 +7,7 @@ import "./global.css"
 import HomePage from "./pages/home"
 import SignIn from "./pages/signin"
 import CreatePage from "./pages/create"
+import InvoicePage from "./pages/invoices"
 
 export default function App() {
   // if not signed in, return early with sign-in prompt
@@ -17,11 +18,15 @@ export default function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/invoice/:id/:price">
+          <InvoicePage />
+        </Route>
         <Route path="/create">
           <CreatePage />
         </Route>
         <Route exact path="/">
-          <HomePage />
+        <CreatePage />
+          {/* <HomePage /> */}
         </Route>
       </Switch>
     </Router>

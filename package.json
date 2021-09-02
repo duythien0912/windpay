@@ -66,6 +66,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.1",
     "regenerator-runtime": "~0.13.5",
+    "short-uuid": "^4.2.0",
     "theme": "^0.1.0"
   },
   "resolutions": {
