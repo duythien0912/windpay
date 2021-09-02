@@ -17,13 +17,8 @@
     "test": "npm run build:contract:debug && cd contract && cargo test -- --nocapture && cd .. && jest test --runInBand",
     "pre-commit": "lint-staged",
     "lint": "eslint ./src",
-    "postinstall": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run format",
-      "pre-push": "npm run lint && npm run format && npm run deploy"
-    }
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.+(js|jsx)": [
