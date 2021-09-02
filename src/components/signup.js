@@ -14,7 +14,7 @@ import {
   Image,
 } from "@chakra-ui/react"
 
-const KuttyHero = () => {
+const SignUp = () => {
   return (
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
@@ -67,7 +67,7 @@ const KuttyHero = () => {
               type="email"
               placeholder="Enter your email..."
               bg="white"
-              required="true"
+              required={true}
             />
             <Button
               w="full"
@@ -88,7 +88,7 @@ const KuttyHero = () => {
               type="email"
               placeholder="Enter your email..."
               bg="white"
-              required="true"
+              required={true}
             />
             <InputRightElement w="auto">
               <Button
@@ -130,4 +130,4 @@ const KuttyHero = () => {
   )
 }
 
-export default KuttyHero
+export default SignUp

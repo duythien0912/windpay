@@ -79,7 +79,7 @@ const HomePage = () => {
   }
 
   return (
-    <Box px={8} py={32} mx="auto">
+    <Box as="main" px={8} py={32} mx="auto">
       <Box
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
@@ -98,7 +98,7 @@ const HomePage = () => {
             display={{ base: "block", lg: "inline" }}
             w="full"
             bgClip="text"
-            bgGradient="linear(to-r, green.400,purple.500)"
+            bgGradient="linear(to-r, brand.400,purple.500)"
             fontWeight="extrabold"
           >
             customer feedback
@@ -111,9 +111,7 @@ const HomePage = () => {
           fontSize={{ base: "lg", md: "xl" }}
           color={useColorModeValue("gray.600", "gray.300")}
         >
-          Hellonext is a feature voting software where you can allow your users to
-          vote on features, publish roadmap, and complete your customer feedback
-          loop.
+          Create an transaction
         </chakra.p>
         <SimpleGrid
           as="form"
@@ -136,7 +134,7 @@ const HomePage = () => {
                 id="account"
                 defaultValue={account}
                 placeholder="Enter your account..."
-                required="true"
+                required={true}
               />
               <InputRightAddon minHeight="48px" children=".testnet" />
             </InputGroup>
@@ -152,7 +150,7 @@ const HomePage = () => {
                 autoComplete="off"
                 defaultValue={amount}
                 placeholder="Enter your amount..."
-                required="true"
+                required={true}
               />
               <InputRightAddon minHeight="48px" children="Near" />
             </InputGroup>

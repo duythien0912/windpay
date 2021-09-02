@@ -64,6 +64,7 @@
     "react": ">=16",
     "react-dom": "~17.0.1",
     "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.1",
     "regenerator-runtime": "~0.13.5",
     "theme": "^0.1.0"
   },
