@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME || "payapp"
+const CONTRACT_NAME = process.env.CONTRACT_NAME || "windpay.support.testnet"
 
 function getConfig(env) {
   switch (env) {
