@@ -1,6 +1,6 @@
 import "regenerator-runtime/runtime"
 import React from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 
 import "./global.css"
 
@@ -16,19 +16,17 @@ export default function App() {
   }
 
   return (
-    <Router>
-      <Switch>
-        <Route path="/invoice/:id/:price">
-          <InvoicePage />
-        </Route>
-        <Route path="/create">
-          <CreatePage />
-        </Route>
-        <Route exact path="/">
+    <Switch>
+      <Route path="/invoice/:id/:price">
+        <InvoicePage />
+      </Route>
+      <Route path="/create">
         <CreatePage />
-          {/* <HomePage /> */}
-        </Route>
-      </Switch>
-    </Router>
+      </Route>
+      <Route exact path="/">
+        <CreatePage />
+        {/* <HomePage /> */}
+      </Route>
+    </Switch>
   )
 }

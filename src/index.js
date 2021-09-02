@@ -1,6 +1,8 @@
 import { ChakraProvider } from "@chakra-ui/react"
 import React from "react"
 import ReactDOM from "react-dom"
+import { BrowserRouter as Router } from "react-router-dom"
+
 import App from "./App"
 import { initContract } from "./utils"
 import { ColorModeScript } from "@chakra-ui/react"
@@ -13,10 +15,12 @@ window.nearInitPromise = initContract()
   .then(() => {
     ReactDOM.render(
       <Theme>
-        <ColorModeScript initialColorMode={config.initialColorMode} />
-        <Header />
-        <App />
-        <Credits />
+        <Router>
+          <ColorModeScript initialColorMode={config.initialColorMode} />
+          <Header />
+          <App />
+          <Credits />
+        </Router>
       </Theme>,
       document.querySelector("#root")
     )

@@ -12,7 +12,13 @@ export default function SignIn() {
 
   return (
     <main>
-      <Box textAlign="center" px={8} py={24} mx="auto">
+      <Box
+        textAlign="center"
+        px={8}
+        py={24}
+        w={{ base: "full", md: 7 / 12 }}
+        mx="auto"
+      >
         <chakra.h1
           mb={6}
           fontSize={{ base: "4xl", md: "6xl" }}
@@ -21,7 +27,7 @@ export default function SignIn() {
           letterSpacing={{ base: "normal", md: "tight" }}
           color={useColorModeValue("gray.900", "gray.100")}
         >
-          Welcome to NEAR!
+          Welcome to Rabit Pay!
         </chakra.h1>
 
         <chakra.p
@@ -30,19 +36,8 @@ export default function SignIn() {
           fontSize={{ base: "lg", md: "xl" }}
           color={useColorModeValue("gray.600", "gray.300")}
         >
-          To make use of the NEAR blockchain, you need to sign in. The button below
+          To make use of the Rabit Payment, you need to sign in. The button below
           will sign you in using NEAR Wallet.
-        </chakra.p>
-        <chakra.p
-          px={{ base: 0, lg: 24 }}
-          mb={6}
-          fontSize={{ base: "sm", md: "md" }}
-          color={useColorModeValue("gray.600", "gray.300")}
-        >
-          By default, when your app runs in "development" mode, it connects to a test
-          network ("testnet") wallet. This works just like the main network
-          ("mainnet") wallet, but the NEAR Tokens on testnet aren't convertible to
-          other currencies – they're just for testing!
         </chakra.p>
         <chakra.p
           px={{ base: 0, lg: 24 }}
@@ -66,7 +61,7 @@ export default function SignIn() {
               }
             }}
           >
-            Sign in
+            Sign in with Near
           </Button>
         </chakra.p>
       </Box>

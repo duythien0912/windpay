@@ -34,14 +34,23 @@ const CreatePage = () => {
   }
   return (
     <>
-      <Box as="main" px={8} py={32} mx="auto">
+      <Box as="main" px={8} py={36} mx="auto">
         <Box
           w={{ base: "full", md: 5 / 12 }}
           mx="auto"
           mb={2}
           textAlign={{ base: "left", md: "left" }}
         >
-          Create new Invoice:
+          <Text
+            fontSize={{ base: "2xl", md: "4xl" }}
+            display={{ base: "block", lg: "inline" }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, purple.500, brand.300)"
+            fontWeight="extrabold"
+          >
+            Create new Invoice:
+          </Text>
         </Box>
 
         <SimpleGrid
