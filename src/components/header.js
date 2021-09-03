@@ -152,7 +152,7 @@ const ChakraUIHeader = () => {
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
                 <Link
                   isExternal
-                  aria-label="Go to Wind Pay GitHub page"
+                  aria-label="Go to Rabbit Quest GitHub page"
                   href="https://github.com/duythien0912/windpay"
                 >
                   <Icon

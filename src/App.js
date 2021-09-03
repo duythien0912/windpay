@@ -8,6 +8,7 @@ import HomePage from "./pages/home"
 import SignIn from "./pages/signin"
 import CreatePage from "./pages/create"
 import InvoicePage from "./pages/invoices"
+import ConfigPage from "./pages/config"
 
 export default function App() {
   // if not signed in, return early with sign-in prompt
@@ -24,7 +25,8 @@ export default function App() {
         <CreatePage />
       </Route>
       <Route exact path="/">
-        <CreatePage />
+        <ConfigPage />
+        {/* <CreatePage /> */}
         {/* <HomePage /> */}
       </Route>
     </Switch>

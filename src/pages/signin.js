@@ -27,7 +27,7 @@ export default function SignIn() {
           letterSpacing={{ base: "normal", md: "tight" }}
           color={useColorModeValue("gray.900", "gray.100")}
         >
-          Welcome to Rabit Pay!
+          Welcome to Rabbit Quest!
         </chakra.h1>
 
         <chakra.p
@@ -36,8 +36,8 @@ export default function SignIn() {
           fontSize={{ base: "lg", md: "xl" }}
           color={useColorModeValue("gray.600", "gray.300")}
         >
-          To make use of the Rabit Payment, you need to sign in. The button below
-          will sign you in using NEAR Wallet.
+          To make use of the Rabit quest, you need to sign in. The button below will
+          sign you in using NEAR Wallet.
         </chakra.p>
         <chakra.p
           px={{ base: 0, lg: 24 }}
